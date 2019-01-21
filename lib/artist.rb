@@ -1,6 +1,6 @@
 class Artist
 @@all = []
-
+extend Concerns::Findable
 attr_accessor :name
 
 def initialize(name)
@@ -36,8 +36,22 @@ def add_song(song)
   if !self.songs.include?(song)
 self.songs << song
 end
-  
 
+if song.artist == nil
+  song.artist = self
 end
+end
+
+def genres
+output = []
+ self.songs.each do |song|
+      if !output.include?(song.genre)
+      output << song.genre
+      end
+  end
+return output
+end
+
+
 
 end
