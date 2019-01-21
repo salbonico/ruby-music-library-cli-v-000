@@ -88,10 +88,8 @@ def play_song
 self.list_songs
 puts "Which song number would you like to play?"
 index = gets.strip.to_i
-sorted_array = Song.all.sort_by {|song| song.name}
-index -=1
-if index >= 0 && index < Song.all.count
-puts "Playing #{sorted_array[index].name} by #{sorted_array[index].artist.name}"
+puts "#{index}"
+
 end
 end
 
