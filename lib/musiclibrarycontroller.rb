@@ -26,7 +26,7 @@ end
 def list_songs
   index = 1
 Song.all.each do |song|
-  puts "#{index}. #{song.artist} - #{song.name} - #{song.genre}"
+  puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   index +=1
 end
 
