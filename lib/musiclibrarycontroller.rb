@@ -94,9 +94,7 @@ def play_song
     index +=1
   end
 puts "Which song number would you like to play?"
-indexin = gets.strip.to_i
 
-puts "#{indexin}"
 
 
 end
