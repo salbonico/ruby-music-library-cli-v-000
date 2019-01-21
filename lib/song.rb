@@ -83,5 +83,12 @@ if !self.find_by_name(array[1])
 end
 end
 
+def self.create_from_filename(filename)
+new_object = self.new_from_filename(filename)
+new_object.save
+return new_object
+end
+
+
 
 end
