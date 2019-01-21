@@ -67,5 +67,22 @@ sorted_output.each do |song|
 end
 end
 
+def list_songs_by_genre
+puts "Please enter the name of a genre:"
+genre = gets.strip
+index = 1
+output =  []
+Song.all.each do |object|
+  if object.genre.name == genre
+    output << object
+  end
+end
+sorted_output = output.sort_by {|song| song.name}
+sorted_output.each do |song|
+  puts "#{index}. #{song.name} - #{song.artist.name}"
+  index +=1
+end
+end
+
 
 end
