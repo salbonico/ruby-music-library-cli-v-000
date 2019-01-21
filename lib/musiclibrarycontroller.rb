@@ -85,10 +85,15 @@ end
 end
 
 def play_song
-self.list_songs
+  index = 1
+  sorted_array = Song.all.sort_by {|song| song.name}
+  sorted_array.each do |song|
+    puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    index +=1
+  end
 puts "Which song number would you like to play?"
-index = gets.strip.to_i
-puts "#{index}"
+indexin = gets.strip.to_i
+
 
 
 end
