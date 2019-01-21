@@ -1,3 +1,5 @@
+require 'pry'
+
 class MusicLibraryController
 
 attr_accessor :path
@@ -93,6 +95,7 @@ def play_song
   end
 puts "Which song number would you like to play?"
 indexin = gets.strip.to_i
+
 puts "#{indexin}"
 
 
