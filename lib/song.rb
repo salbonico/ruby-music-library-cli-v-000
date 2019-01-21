@@ -76,7 +76,10 @@ end
 
 def self.new_from_filename(filename)
 array = filename.split(" - ")
-Song.find_or_create_by_name(array[1])
+if !self.find_by_name
+  Song.new(array[1],array[0],array[2].chomp(".mp3"))
+
+
 end
 
 
