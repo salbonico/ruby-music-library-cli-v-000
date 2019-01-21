@@ -91,7 +91,7 @@ index = gets.strip.to_i
 if index >0 && index < Song.all.count
   sorted_array = Song.all.sort_by {|song| song.name}
   index -=1
-  puts "Playing #{sorted_array[index].name} by #{sorted_array[index].artist.name}"
+  puts "Playing #{index}"
 end
 end
 
