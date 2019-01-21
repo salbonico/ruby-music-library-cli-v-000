@@ -32,6 +32,18 @@ sorted_array.each do |song|
 end
 end
 
+def list_artists
+index = 1
+sorted_array = Artist.all.sort_by {|object| object.name}
+sorted_array.each do |object|
+  puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+  index +=1
+end
+end
+
+
+
+
 
 
 end
