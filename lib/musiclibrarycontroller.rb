@@ -50,7 +50,11 @@ sorted_array.each do |genre|
 end
 end
 
+def list_songs_by_artist
+puts "Please enter the name of an artist:"
+artist = gets.strip
 
+end
 
 
 end
