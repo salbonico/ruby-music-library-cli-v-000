@@ -4,9 +4,11 @@ class Song
 
 attr_accessor :name
 
-def initialize(name, artist = nil)
+def initialize(name, artist = nil, genre = nil)
   @name = name
   self.artist = artist
+  self.genre = genre
+
 end
 
 
@@ -34,7 +36,42 @@ def artist
 end
 
 def artist=(artist)
-artist.add_song(self)
+ if artist != nil
+ @artist = artist
+ artist.add_song(self)
+ end
 end
+
+def genre
+  @genre
+end
+
+def genre=(genre = nil)
+  if genre != nil
+@genre = genre
+    if !genre.songs.include?(self)
+      genre.songs << self
+    end
+  end
+end
+
+def self.find_by_name(name)
+self.all.each do |song|
+   if song.name == name
+     return song
+   end
+ end
+ return false
+end
+
+def self.find_or_create_by_name(name)
+  output = self.find_by_name(name)
+  if output != false
+  return output
+else
+  self.create(name)
+end
+end
+
 
 end
