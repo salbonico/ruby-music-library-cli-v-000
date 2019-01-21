@@ -34,9 +34,9 @@ end
 
 def list_artists
 index = 1
-sorted_array = Song.all.sort_by {|song| song.artist.name}
-sorted_array.each do |song|
-  puts "#{index}. #{song.artist.name}"
+sorted_array = Artist.all.sort_by {|artist| artist.name}
+sorted_array.each do |artist|
+  puts "#{index}. #{artist.name}"
   index +=1
 end
 end
