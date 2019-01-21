@@ -25,7 +25,7 @@ def save
   @@all << self
 end
 
-def self.create(name)
+def self.create(name, artist = nil, genre = nil)
   new_object = self.new(name)
   new_object.save
   return new_object
@@ -71,6 +71,12 @@ def self.find_or_create_by_name(name)
 else
   self.create(name)
 end
+end
+
+
+def self.new_from_filename(filename)
+
+
 end
 
 
