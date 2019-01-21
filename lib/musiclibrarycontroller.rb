@@ -41,7 +41,14 @@ sorted_array.each do |artist|
 end
 end
 
-
+def list_genres
+index = 1
+sorted_array = Genre.all.sort_by {|genre| genre.name}
+sorted_array.each do |genre|
+  puts "#{index}. #{genre.name}"
+  index +=1
+end
+end
 
 
 
