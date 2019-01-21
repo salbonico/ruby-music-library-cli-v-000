@@ -25,7 +25,8 @@ end
 
 def list_songs
   index = 1
-Song.all.each do |song|
+  sorted_array = Song.all.name.sort
+sorted_array.all.each do |song|
   puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   index +=1
 end
