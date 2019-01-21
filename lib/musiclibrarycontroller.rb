@@ -23,5 +23,15 @@ def call
   end
 end
 
+def list_songs
+  index = 1
+Song.all.each do |song|
+  puts "#{index}. #{song.artist} - #{song.title} - #{song.genre}"
+  index +=1
+end
+
+end
+
+
 
 end
