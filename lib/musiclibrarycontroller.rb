@@ -54,8 +54,8 @@ def list_songs_by_artist
 puts "Please enter the name of an artist:"
 artist = gets.strip
 
-Songs.all.each do |object|
-  if object.artist.name == artist
+Song.all.each do |object|
+  if object.artist.name == artist 
     puts "#{object.name}"
   end
 end
