@@ -53,12 +53,15 @@ end
 def list_songs_by_artist
 puts "Please enter the name of an artist:"
 artist = gets.strip
-
+index = 1
+output =  []
 Song.all.each do |object|
-  if object.artist.name == artist 
-    puts "#{object.name}"
+  if object.artist.name == artist
+    output << "#{object.name}"
   end
 end
+output.sort_by {|song| song.name}
+
 end
 
 
