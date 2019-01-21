@@ -60,7 +60,11 @@ Song.all.each do |object|
     output << "#{object.name}"
   end
 end
-output.sort_by {|song| song.name}
+sorted_output = output.sort_by {|song| song.name}
+sorted_output.each do |song|
+  puts "#{index}. #{song.name}"
+  index +=1
+end
 
 end
 
