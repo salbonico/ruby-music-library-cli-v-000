@@ -25,7 +25,7 @@ def save
   @@all << self
 end
 
-def self.create(name, artist = nil, genre = nil)
+def self.create(name)
   new_object = self.new(name)
   new_object.save
   return new_object
@@ -75,7 +75,7 @@ end
 
 
 def self.new_from_filename(filename)
-
+array = filename.split(" - ")
 
 end
 
