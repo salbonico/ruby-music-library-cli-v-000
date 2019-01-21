@@ -24,14 +24,12 @@ def call
 end
 
 def list_songs
-  index = 1
-array = Song.all
+index = 1
 sorted_array = Song.all.sort_by {|song| song.name}
 sorted_array.each do |song|
   puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
   index +=1
 end
-
 end
 
 
