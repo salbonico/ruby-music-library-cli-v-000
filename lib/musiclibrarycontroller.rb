@@ -57,7 +57,7 @@ index = 1
 output =  []
 Song.all.each do |object|
   if object.artist.name == artist
-    output << "#{object.name}"
+    output << object
   end
 end
 sorted_output = output.sort_by {|song| song.name}
