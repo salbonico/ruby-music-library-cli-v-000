@@ -65,7 +65,6 @@ sorted_output.each do |song|
   puts "#{index}. #{song.name} - #{song.genre.name}"
   index +=1
 end
-
 end
 
 
