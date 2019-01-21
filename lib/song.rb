@@ -76,7 +76,7 @@ end
 
 def self.new_from_filename(filename)
 array = filename.split(" - ")
-
+Song.find_or_create_by_name(array[1])
 end
 
 
